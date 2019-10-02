@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEnemies:
-  - {fileID: 5416257422878355014, guid: eab5a45ae8692e34e939ebb0925634c1, type: 3}
+  - {fileID: 5481084101228377334, guid: 12602a97cc5a78e44b7fd130d0fb8248, type: 3}
   enemySpawnPerSecond: 0.5
   enemyDefaultPadding: 1.5
   weaponDefinitions:
@@ -817,6 +817,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7950146425393194691, guid: c20ee1e649b23d048a252b7224ef20d7,
+        type: 3}
+      propertyPath: _type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c20ee1e649b23d048a252b7224ef20d7, type: 3}
