@@ -21,6 +21,11 @@ public class Hero : MonoBehaviour
     // This variable holds a reference to the last triggering GameObject
     private GameObject lastTriggerGo = null;
 
+    // Declare a new delegate type WeaponFireDelegate
+    public delegate void WeaponFireDelegate();
+    // Create a WeaponFireDelegate field named fireDelegate.
+    public WeaponFireDelegate fireDelegate;
+
     private void Awake()
     {
         if(S == null)
@@ -30,6 +35,7 @@ public class Hero : MonoBehaviour
         {
             Debug.LogError("Hero.Awake() - Attempted to assign second Hero.S!");
         }
+        //fireDelegate += TempFire;
     }
 
     // Update is called once per frame
@@ -49,18 +55,18 @@ public class Hero : MonoBehaviour
         transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
 
         // Allow the ship to fire
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            TempFire();
-        }
-    }
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    TempFire();
+        //}
 
-    void TempFire()
-    {
-        GameObject projGO = Instantiate<GameObject>(projectilePrefab);
-        projGO.transform.position = transform.position;
-        Rigidbody rigidB = projGO.GetComponent<Rigidbody>();
-        rigidB.velocity = Vector3.up * projectileSpeed;
+        // Use the fireDelegate to fire Weapons
+        // First, make sure the button is pressed: Axis("Jump")
+        // Then ensure that fireDelegate isn't null to avoid an error
+        if(Input.GetAxis("Jump") == 1 && fireDelegate != null)
+        {
+            fireDelegate();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
