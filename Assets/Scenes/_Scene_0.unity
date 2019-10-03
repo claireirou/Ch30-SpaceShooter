@@ -489,10 +489,10 @@ MonoBehaviour:
   weaponDefinitions:
   - type: 1
     letter: B
-    color: {r: 1, g: 1, b: 1, a: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     projectilePrefab: {fileID: 3290282791736184699, guid: e9a141e699de5be4c8d24004912dd442,
       type: 3}
-    projectileColor: {r: 1, g: 1, b: 1, a: 0}
+    projectileColor: {r: 1, g: 1, b: 1, a: 1}
     damageOnHit: 1
     continuousDamage: 0
     delayBetweenShots: 0.2
@@ -502,16 +502,16 @@ MonoBehaviour:
     color: {r: 0.23137257, g: 0.72156864, b: 0.9215687, a: 1}
     projectilePrefab: {fileID: 3290282791736184699, guid: e9a141e699de5be4c8d24004912dd442,
       type: 3}
-    projectileColor: {r: 0.23137257, g: 0.72156864, b: 0.9215687, a: 0}
+    projectileColor: {r: 0.23137257, g: 0.72156864, b: 0.9215687, a: 1}
     damageOnHit: 1
     continuousDamage: 0
     delayBetweenShots: 0.4
     velocity: 50
   - type: 6
     letter: O
-    color: {r: 0.37254903, g: 0.72156864, b: 0.2509804, a: 0}
+    color: {r: 0.37254903, g: 0.72156864, b: 0.2509804, a: 1}
     projectilePrefab: {fileID: 0}
-    projectileColor: {r: 1, g: 1, b: 1, a: 0}
+    projectileColor: {r: 1, g: 1, b: 1, a: 1}
     damageOnHit: 0
     continuousDamage: 0
     delayBetweenShots: 0
