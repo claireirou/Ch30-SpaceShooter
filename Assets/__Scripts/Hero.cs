@@ -27,7 +27,7 @@ public class Hero : MonoBehaviour
     // Create a WeaponFireDelegate field named fireDelegate.
     public WeaponFireDelegate fireDelegate;
 
-    private void Awake()
+    private void Start()
     {
         if(S == null)
         {
@@ -37,6 +37,8 @@ public class Hero : MonoBehaviour
             Debug.LogError("Hero.Awake() - Attempted to assign second Hero.S!");
         }
         //fireDelegate += TempFire;
+        ClearWeapons();
+        weapons[0].SetType(WeaponType.blaster);
     }
 
     // Update is called once per frame
